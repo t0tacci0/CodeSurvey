@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from colorama import Fore, Style, init
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -12,8 +13,4 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('code_survey')
 
-example = SHEET.worksheet('example')
-
-data = example.get_all_values()
-
-print(data)
+print("Welcome to the Code Survey Program!")
