@@ -17,13 +17,13 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('code_survey')
 
 def welcome():
-    print(f"{Fore.MAGENTA}{Style.BRIGHT}Welcome to the Code Survey Program!\n")
+    print(f"{Fore.GREEN}Welcome to the Code Survey Program!\n")
     time.sleep(5)
-    print(f"{Fore.MAGENTA}This survey is made to help people to have a better vision of the world of coding")
-    print(f"{Fore.MAGENTA}and at the same time to get information from answers.\n")
+    print(f"{Fore.GREEN}This survey is made to help people to have a better vision of coding")
+    print(f"{Fore.GREEN}and at the same time to get information from answers.\n")
     time.sleep(6)
-    print(f"{Fore.MAGENTA}Soon you will be asked a series of questions,")
-    print(f"{Fore.MAGENTA}Please answer truthfully and enjoy!\n")
+    print(f"{Fore.GREEN}Soon you will be asked a series of questions.")
+    print(f"{Fore.GREEN}Please answer truthfully and enjoy!\n")
     time.sleep(5)
 
     while True:
@@ -40,4 +40,22 @@ def welcome():
     print(Style.RESET_ALL)
 
 
+def homepage():
+    while True:
+        print(f"{Fore.GREEN}1. Take Survey")
+        print(f"{Fore.GREEN}2. Exit")
+        choice = input(f"{Fore.YELLOW}Enter your choice (1 or 2): ")
+
+        if choice == '1':
+            take_survey()
+        elif choice == '2':
+            print(f"{Fore.YELLOW}Exiting the Code Survey Program...")
+            print(f"{Fore.YELLOW}Hope to see you soon!")
+            break
+        else:
+            print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")
+
+
+
 welcome()
+homepage()
