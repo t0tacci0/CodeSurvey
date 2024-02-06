@@ -3,6 +3,7 @@ from google.oauth2.service_account import Credentials
 from colorama import Fore, Style, init
 import time
 import re
+import os
 
 
 SCOPE = [
@@ -27,6 +28,7 @@ def welcome():
     print(f"{Fore.GREEN}{Style.BRIGHT}Soon you will be asked a series of questions.")
     print(f"{Fore.GREEN}{Style.BRIGHT}Please answer truthfully and enjoy!\n")
     time.sleep(5)
+    clear()
 
     while True:
         user_name = input(f"{Fore.YELLOW}{Style.BRIGHT}Please enter your name: ")
@@ -40,6 +42,13 @@ def welcome():
     time.sleep(3)
     print(f"{Fore.YELLOW}{Style.BRIGHT}Get Ready!")
     print(Style.RESET_ALL)
+
+def clear():
+    # Check the OS and clear the screen
+    if os.name == 'nt':  # This is for Windows
+        os.system('cls')
+    else:  # This is for Linux and macOS
+        os.system('clear')    
 
 
 def homepage():
@@ -70,7 +79,6 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
-            # Add code to record the answer in the survey data
             print("Answer recorded. Thank you!")
             break
         else:
