@@ -20,6 +20,7 @@ SHEET = GSPREAD_CLIENT.open('code_survey')
 def welcome():
     print(f"{Fore.GREEN}{Style.BRIGHT}System loading.....")
     time.sleep(5)
+    clear()
     print(f"{Fore.GREEN}{Style.BRIGHT}Welcome to the Code Survey Program!\n")
     time.sleep(5)
     print(f"{Fore.GREEN}{Style.BRIGHT}This survey is made to help people to have a better vision of coding")
@@ -37,11 +38,10 @@ def welcome():
             break
         else:
             print(f"{Fore.RED}{Style.BRIGHT}Invalid name. Please enter a valid name containing only letters and spaces.")
+        
 
-    print(f"{Fore.YELLOW}{Style.BRIGHT}Hello, {user_name}! Thank you for participating in the Code Survey.\n")
-    time.sleep(3)
-    print(f"{Fore.YELLOW}{Style.BRIGHT}Get Ready!")
-    print(Style.RESET_ALL)
+    print(f"{Fore.YELLOW}{Style.BRIGHT}Hello, {user_name}! Get Ready for the Code Survey.\n")
+
 
 def clear():
     # Check the OS and clear the screen
@@ -60,6 +60,7 @@ def homepage():
         if choice == '1':
             take_survey()
         elif choice == '2':
+            print()
             print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey Program...")
             print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon!")
             break
@@ -67,7 +68,10 @@ def homepage():
             print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")
 
 def take_survey():
+    print()
     print("Survey started!")
+    time.sleep(3)
+    clear()
 
     # First survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Why are you interested in coding?")
@@ -79,10 +83,26 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
-            print("Answer recorded. Thank you!")
+            print("Answer saved. Thank you!")
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+
+    # Second survey question
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: How many hours you would spend per week to study?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. 15-25")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. 25-35")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. 35+")
+
+    while True:
+        answer = input("Enter your choice (1, 2, or 3): ")
+
+        if answer in ['1', '2', '3']:
+            print("Answer saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")        
 
 welcome()
 homepage()
