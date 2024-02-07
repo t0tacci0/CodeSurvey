@@ -89,6 +89,23 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
+    if answer == '1' or answer == '3':
+        # Survey sub-question 1
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What study program are you interested in?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Full Stack Web Development")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Software Developer")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. Data Engineer")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. Game Development")
+        
+        while True:
+            sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
+
+            if sub_answer in ['1', '2', '3', '4']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2, 3, or 4.")        
+
     # Second survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 2: How many hours you would spend per week to study?")
     print(f"{Fore.CYAN}{Style.BRIGHT}1. 15-25")
@@ -121,8 +138,8 @@ def take_survey():
 
     # Fourth survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 4: Are you mentally active?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i am.")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. Not actually.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. Yes , i am.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Not actually.")
 
     while True:
         answer = input("Enter your choice (1 or 2): ")
@@ -135,8 +152,8 @@ def take_survey():
 
     # Fifth survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 5: Do you prefer working on remote or in office?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}2. Remote.")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. Hybrid.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. Remote.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Hybrid.")
     print(f"{Fore.CYAN}{Style.BRIGHT}3. In Office.")
 
     while True:
@@ -146,7 +163,7 @@ def take_survey():
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")                      
+            print("Invalid choice. Please enter 1, 2, or 3.")                             
 
 welcome()
 homepage()
