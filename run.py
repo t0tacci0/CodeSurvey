@@ -23,11 +23,11 @@ def welcome():
     clear()
     print(f"{Fore.GREEN}{Style.BRIGHT}Welcome to the Code Survey Program!\n")
     time.sleep(5)
-    print(f"{Fore.GREEN}{Style.BRIGHT}This survey is made to help people to have a better vision of coding")
-    print(f"{Fore.GREEN}{Style.BRIGHT}and at the same time to get information from answers.\n")
+    print(f"{Fore.GREEN}{Style.BRIGHT}This Survey was created to help people have a better understanding of coding")
+    print(f"{Fore.GREEN}{Style.BRIGHT}and at the same time gaining information from answers.\n")
     time.sleep(6)
-    print(f"{Fore.GREEN}{Style.BRIGHT}Soon you will be asked a series of questions.")
-    print(f"{Fore.GREEN}{Style.BRIGHT}Please answer truthfully and enjoy!\n")
+    print(f"{Fore.GREEN}{Style.BRIGHT}You will shortly be asked a series of questions.")
+    print(f"{Fore.GREEN}{Style.BRIGHT}Please answer honestly and enjoy!\n")
     time.sleep(5)
     clear()
 
@@ -75,10 +75,10 @@ def take_survey():
 
     # First survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Are you interested in coding?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}1. Personal Growth")
-    print(f"{Fore.CYAN}{Style.BRIGHT}2. School")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. Change Career")
-    print(f"{Fore.CYAN}{Style.BRIGHT}4. No")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. Yes, for personal growth.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes, for my school.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. Yes, to change career.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}4. No.")
 
     while True:
         answer = input("Enter your choice (1, 2, 3 or 4.): ")
@@ -91,11 +91,11 @@ def take_survey():
 
     if answer == '1' or answer == '3':
         # Survey sub-question 1
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What study program are you interested in?")
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Full Stack Web Development")
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Software Developer")
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. Data Engineer")
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. Game Development")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What type of career would you be interested in?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Full Stack Web Development.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Software Developer.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. Data Engineer.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. Game Development.")
         
         while True:
             sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
@@ -108,9 +108,9 @@ def take_survey():
 
     # Second survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 2: How many hours you would spend per week to study?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}1. 15-25")
-    print(f"{Fore.CYAN}{Style.BRIGHT}2. 25-35")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. 35+")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. 15-25.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. 25-35.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. 35+.")
 
     while True:
         answer = input("Enter your choice (1, 2, or 3): ")
@@ -123,7 +123,7 @@ def take_survey():
 
     if answer == '1' or answer == '2':
         # Survey sub-question 1
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Are you working in the while?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Are you working at the moment?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes, full-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Yes, Part-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. No.")
@@ -139,9 +139,9 @@ def take_survey():
 
     # Third survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 3: Do you have any background in Coding?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}1. Really not too much.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. I have some knowledge about it.")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i do.")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. No, totally new in this.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. No, i'm totally new in Coding.")
 
     while True:
         answer = input("Enter your choice (1, 2, or 3): ")
@@ -151,6 +151,22 @@ def take_survey():
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+    if answer == '1' or answer == '2':
+        # Survey sub-question 1
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Where did you acquire this knowledge?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. At school or any course paid.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. On your own with free material on internet.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. During your free time as hobby.")
+        
+        while True:
+            sub_answer = input("Enter your choice (1, 2 or 3): ")
+
+            if sub_answer in ['1', '2', '3']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2 or 3.")        
 
     # Fourth survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 4: Are you mentally active?")
