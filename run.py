@@ -34,10 +34,10 @@ def welcome():
     while True:
         user_name = input(f"{Fore.YELLOW}{Style.BRIGHT}Please enter your name: ")
         print()
-        if re.match("^[a-zA-Z ]+$", user_name):
+        if re.match("^[a-zA-Z]+$", user_name):
             break
         else:
-            print(f"{Fore.RED}{Style.BRIGHT}Invalid name. Please enter a valid name containing only letters and spaces.")
+            print(f"{Fore.RED}{Style.BRIGHT}Invalid name. Please enter a valid name containing only letters.")
         
 
     print(f"{Fore.YELLOW}{Style.BRIGHT}Hello, {user_name}! Get Ready for the Code Survey.\n")
@@ -120,6 +120,22 @@ def take_survey():
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
+
+    if answer == '1' or answer == '2':
+        # Survey sub-question 1
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Are you working in the while?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes, full-time.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Yes, Part-time.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. No.")
+        
+        while True:
+            sub_answer = input("Enter your choice (1, 2 or 3): ")
+
+            if sub_answer in ['1', '2', '3']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2 or 3.")        
 
     # Third survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 3: Do you have any background in Coding?")
