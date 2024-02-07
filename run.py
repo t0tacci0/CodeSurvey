@@ -74,22 +74,23 @@ def take_survey():
     clear()
 
     # First survey question
-    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Why are you interested in coding?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Are you interested in coding?")
     print(f"{Fore.CYAN}{Style.BRIGHT}1. Personal Growth")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. School")
     print(f"{Fore.CYAN}{Style.BRIGHT}3. Change Career")
+    print(f"{Fore.CYAN}{Style.BRIGHT}4. No")
 
     while True:
-        answer = input("Enter your choice (1, 2, or 3): ")
+        answer = input("Enter your choice (1, 2, 3 or 4.): ")
 
-        if answer in ['1', '2', '3']:
+        if answer in ['1', '2', '3', '4']:
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
     # Second survey question
-    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: How many hours you would spend per week to study?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 2: How many hours you would spend per week to study?")
     print(f"{Fore.CYAN}{Style.BRIGHT}1. 15-25")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. 25-35")
     print(f"{Fore.CYAN}{Style.BRIGHT}3. 35+")
@@ -104,7 +105,7 @@ def take_survey():
             print("Invalid choice. Please enter 1, 2, or 3.")
 
     # Third survey question
-    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Do you have any background in Coding?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 3: Do you have any background in Coding?")
     print(f"{Fore.CYAN}{Style.BRIGHT}1. Really not too much.")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i do.")
     print(f"{Fore.CYAN}{Style.BRIGHT}3. No, totally new in this.")
@@ -116,7 +117,36 @@ def take_survey():
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")        
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+    # Fourth survey question
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 4: Are you mentally active?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i am.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. Not actually.")
+
+    while True:
+        answer = input("Enter your choice (1 or 2): ")
+
+        if answer in ['1', '2']:
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    # Fifth survey question
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 5: Do you prefer working on remote or in office?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Remote.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. Hybrid.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. In Office.")
+
+    while True:
+        answer = input("Enter your choice (1, 2, or 3): ")
+
+        if answer in ['1', '2', '3']:
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")                      
 
 welcome()
 homepage()
