@@ -83,11 +83,10 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
-            print("Answer saved. Thank you!")
+            print("Data saved. Thank you!")
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
-
 
     # Second survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: How many hours you would spend per week to study?")
@@ -99,7 +98,22 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
-            print("Answer saved. Thank you!")
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+    # Third survey question
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Do you have any background in Coding?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. Really not too much.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i do.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. No, totally new in this.")
+
+    while True:
+        answer = input("Enter your choice (1, 2, or 3): ")
+
+        if answer in ['1', '2', '3']:
+            print("Data saved. Thank you!")
             break
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")        
