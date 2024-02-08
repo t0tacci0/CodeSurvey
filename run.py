@@ -65,10 +65,10 @@ def homepage():
         elif choice == '3':
             print()
             print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey Program...")
-            print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon!")
+            print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon with more questions!")
             break
         else:
-            print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")
+            print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")        
 
 def view_statistics():
     # Open the worksheet "user_choices"
@@ -155,7 +155,7 @@ def take_survey():
             print("Invalid choice. Please enter 1, 2, or 3.")
 
     if answer == '1' or answer == '2':
-        # Survey sub-question 1
+        # Survey sub-question 2
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Are you working at the moment?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes, full-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Yes, Part-time.")
@@ -187,7 +187,7 @@ def take_survey():
             print("Invalid choice. Please enter 1, 2, or 3.")
 
     if answer == '1' or answer == '2':
-        # Survey sub-question 1
+        # Survey sub-question 3
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Where did you acquire this knowledge?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. At school or any course paid.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. On your own with free material on internet.")
@@ -217,11 +217,26 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1 or 2.")
 
+    if answer == '1':
+        # Survey sub-question 4
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Do you play sports during your free time?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Not really.")
+        
+        while True:
+            sub_answer = input("Enter your choice (1 or 2): ")
+
+            if sub_answer in ['1', '2']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2 or 3.")        
+
     # Fifth survey question
-    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 5: Do you prefer working on remote or in office?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 5: Do you prefer to work on at home or in the office?")
     print(f"{Fore.CYAN}{Style.BRIGHT}1. Remote.")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. Hybrid.")
-    print(f"{Fore.CYAN}{Style.BRIGHT}3. In Office.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. In the Office.")
 
     while True:
         answer = input("Enter your choice (1, 2, or 3): ")
@@ -233,10 +248,25 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
+    if answer == '1' or answer == '3':
+        # Survey sub-question 5
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Do you prefer to work alone or in a team?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. I prefer to work alone at home.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Absolutely in a team.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. I like to alternate.")
+        
+        while True:
+            sub_answer = input("Enter your choice (1, 2 or 3): ")
+
+            if sub_answer in ['1', '2', '3']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2 or 3.")        
+
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
     print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating the survey!")                                     
 
 welcome()
 homepage()
-view_statistics()
