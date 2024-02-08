@@ -54,12 +54,15 @@ def clear():
 def homepage():
     while True:
         print(f"{Fore.GREEN}{Style.BRIGHT}1. Take Survey")
-        print(f"{Fore.GREEN}{Style.BRIGHT}2. Exit")
-        choice = input(f"{Fore.YELLOW}Enter your choice (1 or 2): ")
+        print(f"{Fore.GREEN}{Style.BRIGHT}2. View Statistics")
+        print(f"{Fore.GREEN}{Style.BRIGHT}3. Exit")
+        choice = input(f"{Fore.YELLOW}Enter your choice (1, 2 or 3): ")
 
         if choice == '1':
             take_survey()
         elif choice == '2':
+            view_statistics()
+        elif choice == '3':
             print()
             print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey Program...")
             print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon!")
@@ -67,11 +70,38 @@ def homepage():
         else:
             print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")
 
+def view_statistics():
+    # Open the worksheet "user_choices"
+    worksheet = SHEET.worksheet("user_choices")
+    
+    # Get all values from the worksheet
+    all_values = worksheet.get_all_values()
+    print(f"{Fore.YELLOW}{Style.BRIGHT}--- Survey Statistics ---")
+    
+    # Display statistics for each question
+    for i in range(len(all_values[0])):
+        question = all_values[0][i]
+        choices = [row[i] for row in all_values[1:]]
+        total_responses = len(choices)
+        print(f"{Fore.CYAN}{Style.BRIGHT}Question {i + 1}: {question}")
+        
+        # Count each  user choice
+        choice_counts = {choice: choices.count(choice) for choice in set(choices)}
+        
+        # Display the choices percentages
+        for choice, count in choice_counts.items():
+            percentage = (count / total_responses) * 100
+            print(f"{Fore.GREEN}{Style.BRIGHT}{choice}: {count} responses ({percentage:.2f}%)")
+        
+        print()                     
+
 def take_survey():
     print()
     print("Survey started!")
     time.sleep(3)
     clear()
+
+    user = []
 
     # First survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 1: Are you interested in coding?")
@@ -84,10 +114,11 @@ def take_survey():
         answer = input("Enter your choice (1, 2, 3 or 4.): ")
 
         if answer in ['1', '2', '3', '4']:
+            user.append(answer)
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, 3 or 4.")
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")      
 
     if answer == '1' or answer == '3':
         # Survey sub-question 1
@@ -104,7 +135,8 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2, 3, or 4.")        
+                print("Invalid choice. Please enter 1, 2, 3, or 4.")
+                    
 
     # Second survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 2: How many hours you would spend per week to study?")
@@ -116,6 +148,7 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
+            user.append(answer)
             print("Data saved. Thank you!")
             break
         else:
@@ -147,6 +180,7 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
+            user.append(answer)
             print("Data saved. Thank you!")
             break
         else:
@@ -177,6 +211,7 @@ def take_survey():
         answer = input("Enter your choice (1 or 2): ")
 
         if answer in ['1', '2']:
+            user.append(answer)
             print("Data saved. Thank you!")
             break
         else:
@@ -192,10 +227,16 @@ def take_survey():
         answer = input("Enter your choice (1, 2, or 3): ")
 
         if answer in ['1', '2', '3']:
+            user.append(answer)
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, or 3.")                             
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+    worksheet = SHEET.worksheet("user_choices")
+    worksheet.append_row(user)
+    print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating the survey!")                                     
 
 welcome()
 homepage()
+view_statistics()
