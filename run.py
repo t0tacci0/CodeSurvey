@@ -65,6 +65,11 @@ def homepage():
         elif choice == '3':
             print()
             print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey Program...")
+            print()
+            time.sleep(2)
+            print(f"{Fore.YELLOW}{Style.BRIGHT}Your data will be saved for statistics...")
+            print()
+            time.sleep(2)
             print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon with more questions!")
             break
         else:
@@ -172,7 +177,7 @@ def take_survey():
 
     # Third survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 3: Do you have any background in Coding?")
-    print(f"{Fore.CYAN}{Style.BRIGHT}1. I have some knowledge about it.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. I have some knowledge about.")
     print(f"{Fore.CYAN}{Style.BRIGHT}2. Yes , i do.")
     print(f"{Fore.CYAN}{Style.BRIGHT}3. No, i'm totally new in Coding.")
 
@@ -262,7 +267,42 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2 or 3.")        
+                print("Invalid choice. Please enter 1, 2 or 3.")
+
+    # Sixth survey question
+    print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 6: How do you prefer to learn coding?")
+    print(f"{Fore.CYAN}{Style.BRIGHT}1. Online courses.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}2. Coding Bootcamps.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}3. Interactive platforms.")
+    print(f"{Fore.CYAN}{Style.BRIGHT}4. Other.")
+
+    while True:
+        answer = input("Enter your choice (1, 2, 3 or 4): ")
+
+        if answer in ['1', '2', '3', '4']:
+            user.append(answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
+
+    if answer == '1' or answer == '3':
+        # Survey sub-question 6
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What programming languages you want to learn first?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. HTML and CSS.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. JAVASCRIPT.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. PYTHON.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. C++.")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}5. Other.")
+        
+        while True:
+            sub_answer = input("Enter your choice (1, 2, 3, 4 or 5): ")
+
+            if sub_answer in ['1', '2', '3', '4', '5']:
+                print("Data saved. Thank you!")
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")                    
 
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
