@@ -88,7 +88,7 @@ def view_statistics():
         question = all_values[0][i]
         choices = [row[i] for row in all_values[1:]]
         total_responses = len(choices)
-        print(f"{Fore.CYAN}{Style.BRIGHT}Question {i + 1}: {question}")
+        print(f"{Fore.CYAN}{Style.BRIGHT}User Choices {i + 1}: {question}")
         
         # Count each  user choice
         choice_counts = {choice: choices.count(choice) for choice in set(choices)}
@@ -98,7 +98,7 @@ def view_statistics():
             percentage = (count / total_responses) * 100
             print(f"{Fore.GREEN}{Style.BRIGHT}{choice}: {count} responses ({percentage:.2f}%)")
         
-        print()                     
+        print()        
 
 def take_survey():
     print()
@@ -127,7 +127,7 @@ def take_survey():
 
     if answer == '1' or answer == '3':
         # Survey sub-question 1
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What type of career would you be interested in?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 1: What type of career would you be interested in?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Full Stack Web Development.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Software Developer.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. Data Engineer.")
@@ -137,6 +137,7 @@ def take_survey():
             sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
 
             if sub_answer in ['1', '2', '3', '4']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
@@ -161,7 +162,7 @@ def take_survey():
 
     if answer == '1' or answer == '2':
         # Survey sub-question 2
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Are you working at the moment?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 2: Are you working at the moment?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes, full-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Yes, Part-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. No.")
@@ -170,6 +171,7 @@ def take_survey():
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
             if sub_answer in ['1', '2', '3']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
@@ -193,7 +195,7 @@ def take_survey():
 
     if answer == '1' or answer == '2':
         # Survey sub-question 3
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Where did you acquire this knowledge?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 3: Where did you acquire this knowledge?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. At school or any course paid.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. On your own with free material on internet.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. During your free time as hobby.")
@@ -202,6 +204,7 @@ def take_survey():
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
             if sub_answer in ['1', '2', '3']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
@@ -224,7 +227,7 @@ def take_survey():
 
     if answer == '1':
         # Survey sub-question 4
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Do you play sports during your free time?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 4: Do you play sports during your free time?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Not really.")
         
@@ -232,6 +235,7 @@ def take_survey():
             sub_answer = input("Enter your choice (1 or 2): ")
 
             if sub_answer in ['1', '2']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
@@ -255,7 +259,7 @@ def take_survey():
 
     if answer == '1' or answer == '3':
         # Survey sub-question 5
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: Do you prefer to work alone or in a team?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 5: Do you prefer to work alone or in a team?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. I prefer to work alone at home.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Absolutely in a team.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. I like to alternate.")
@@ -264,6 +268,7 @@ def take_survey():
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
             if sub_answer in ['1', '2', '3']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
@@ -288,7 +293,7 @@ def take_survey():
 
     if answer == '1' or answer == '3':
         # Survey sub-question 6
-        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question: What programming languages you want to learn first?")
+        print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 6: What programming languages you want to learn first?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. HTML and CSS.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. JAVASCRIPT.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. PYTHON.")
@@ -299,14 +304,15 @@ def take_survey():
             sub_answer = input("Enter your choice (1, 2, 3, 4 or 5): ")
 
             if sub_answer in ['1', '2', '3', '4', '5']:
+                user.append(sub_answer)
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")                    
+                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")                               
 
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
-    print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating the survey!")                                     
+    print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating the survey!")                                
 
 welcome()
 homepage()
