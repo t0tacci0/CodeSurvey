@@ -17,30 +17,39 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('code_survey')
 
+"""
+This is for color style text
+"""
+B_GREEN = Fore.GREEN + Style.BRIGHT   # BRIGHT GREEN color text
+B_YELLOW = Fore.YELLOW + Style.BRIGHT   # BRIGHT YELLOW color text
+B_CYAN = Fore.CYAN + Style.BRIGHT   # BRIGHT CYAN color text
+B_RED = Fore.RED + Style.BRIGHT   # BRIGHT RED color text
+
+
 def welcome():
-    print(f"{Fore.GREEN}{Style.BRIGHT}System loading.....")
+    print(B_GREEN + f"System loading.....")
     time.sleep(5)
     clear()
-    print(f"{Fore.GREEN}{Style.BRIGHT}Welcome to the Code Survey Program!\n")
+    print(B_GREEN + f"Welcome to the Code Survey Program!\n")
     time.sleep(5)
-    print(f"{Fore.GREEN}{Style.BRIGHT}This Survey was created to help people have a better understanding of coding")
-    print(f"{Fore.GREEN}{Style.BRIGHT}and at the same time gaining information from answers.\n")
+    print(B_GREEN + f"This Survey was created to help people have a better")
+    print(B_GREEN + f"understanding of coding and at the same time")
+    print(B_GREEN + f"gaining information from answers.\n")
     time.sleep(6)
-    print(f"{Fore.GREEN}{Style.BRIGHT}You will shortly be asked a series of questions.")
-    print(f"{Fore.GREEN}{Style.BRIGHT}Please answer honestly and enjoy!\n")
+    print(B_GREEN + f"You will shortly be asked a series of questions.")
+    print(B_GREEN + f"Please answer honestly and enjoy the survey!\n")
     time.sleep(5)
     clear()
 
     while True:
-        user_name = input(f"{Fore.YELLOW}{Style.BRIGHT}Please enter your name: ")
+        user_name = input(B_YELLOW + f"Please enter your name: ")
         print()
         if re.match("^[a-zA-Z]+$", user_name):
             break
         else:
-            print(f"{Fore.RED}{Style.BRIGHT}Invalid name. Please enter a valid name containing only letters.")
-        
-
-    print(f"{Fore.YELLOW}{Style.BRIGHT}Hello, {user_name}! Get Ready for the Code Survey.\n")
+            print(B_RED + f"Invalid name.")
+            print(B_RED + f"Please enter a valid name with only letters.")
+    print(B_YELLOW + f"Hello, {user_name}!Preparing the Code Survey.\n")
 
 
 def clear():
@@ -48,7 +57,7 @@ def clear():
     if os.name == 'nt':  # This is for Windows
         os.system('cls')
     else:  # This is for Linux and macOS
-        os.system('clear')    
+        os.system('clear')
 
 
 def homepage():
@@ -64,41 +73,43 @@ def homepage():
             view_statistics()
         elif choice == '3':
             print()
-            print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey Program...")
+            print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey...")
             print()
             time.sleep(2)
-            print(f"{Fore.YELLOW}{Style.BRIGHT}Your data will be saved for statistics...")
+            print(f"{Fore.YELLOW}{Style.BRIGHT}Your data will be saved...")
             print()
             time.sleep(2)
-            print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon with more questions!")
+            print(f"{Fore.YELLOW}{Style.BRIGHT}Hope to see you soon!")
             break
         else:
-            print("Invalid choice. Please enter 1 to take the survey or 2 to exit.")        
+            print("Invalid choice. Please enter the correct number.")
+
 
 def view_statistics():
     # Open the worksheet "user_choices"
     worksheet = SHEET.worksheet("user_choices")
-    
+
     # Get all values from the worksheet
     all_values = worksheet.get_all_values()
     print(f"{Fore.YELLOW}{Style.BRIGHT}--- Survey Statistics ---")
-    
+
     # Display statistics for each question
     for i in range(len(all_values[0])):
         question = all_values[0][i]
         choices = [row[i] for row in all_values[1:]]
         total_responses = len(choices)
         print(f"{Fore.CYAN}{Style.BRIGHT}User Choices {i + 1}: {question}")
-        
+
         # Count each  user choice
         choice_counts = {choice: choices.count(choice) for choice in set(choices)}
-        
+
         # Display the choices percentages
         for choice, count in choice_counts.items():
             percentage = (count / total_responses) * 100
-            print(f"{Fore.GREEN}{Style.BRIGHT}{choice}: {count} responses ({percentage:.2f}%)")
-        
-        print()        
+            print(B_GREEN + f"{choice}: {count} responses ({percentage:.2f}%)")
+
+        print()
+
 
 def take_survey():
     print()
@@ -123,7 +134,7 @@ def take_survey():
             print("Data saved. Thank you!")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, 3 or 4.")      
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
     if answer == '1' or answer == '3':
         # Survey sub-question 1
@@ -132,7 +143,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Software Developer.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. Data Engineer.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. Game Development.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
 
@@ -142,7 +153,6 @@ def take_survey():
                 break
             else:
                 print("Invalid choice. Please enter 1, 2, 3, or 4.")
-                    
 
     # Second survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 2: How many hours you would spend per week to study?")
@@ -166,7 +176,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes, full-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Yes, Part-time.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. No.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
@@ -175,7 +185,7 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2 or 3.")        
+                print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Third survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 3: Do you have any background in Coding?")
@@ -199,7 +209,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. At school or any course paid.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. On your own with free material on internet.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. During your free time as hobby.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
@@ -208,7 +218,7 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2 or 3.")        
+                print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Fourth survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 4: Are you mentally active?")
@@ -230,7 +240,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}\nSub-Question 4: Do you play sports during your free time?")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. Yes.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Not really.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1 or 2): ")
 
@@ -239,7 +249,7 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2 or 3.")        
+                print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Fifth survey question
     print(f"{Fore.CYAN}{Style.BRIGHT}\nQuestion 5: Do you prefer to work on at home or in the office?")
@@ -263,7 +273,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}1. I prefer to work alone at home.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}2. Absolutely in a team.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. I like to alternate.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1, 2 or 3): ")
 
@@ -299,7 +309,7 @@ def take_survey():
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}3. PYTHON.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}4. C++.")
         print(f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}5. Other.")
-        
+
         while True:
             sub_answer = input("Enter your choice (1, 2, 3, 4 or 5): ")
 
@@ -308,11 +318,12 @@ def take_survey():
                 print("Data saved. Thank you!")
                 break
             else:
-                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")                               
+                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")
 
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
-    print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating the survey!")                                
+    print(f"{Fore.GREEN}{Style.BRIGHT}\nThank you for partecipating!!")
+
 
 welcome()
 homepage()
