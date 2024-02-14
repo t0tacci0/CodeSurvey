@@ -173,21 +173,21 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-        # Survey sub-question 2
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 2: Are you working now?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. Yes, full-time.")
-        print(B_LIGHTMAGENTA_EX + f"2. Yes, Part-time.")
-        print(B_LIGHTMAGENTA_EX + f"3. No.")
+    # Survey sub-question 2
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 2: Are you working now?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. Yes, full-time.")
+    print(B_LIGHTMAGENTA_EX + f"2. Yes, Part-time.")
+    print(B_LIGHTMAGENTA_EX + f"3. No.")
 
-        while True:
-            sub_answer = input("Enter your choice (1, 2 or 3): ")
+    while True:
+        sub_answer = input("Enter your choice (1, 2 or 3): ")
 
-            if sub_answer in ['1', '2', '3']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2 or 3.")
+        if sub_answer in ['1', '2', '3']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Third survey question
     print(B_CYAN + f"\nQuestion 3: Do you have any background in Coding?\n")
@@ -205,22 +205,22 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-        # Survey sub-question 3
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 3: Where did you acquire")
-        print(B_LIGHTMAGENTA_EX + f"this knowledge?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. At school or any course paid.")
-        print(B_LIGHTMAGENTA_EX + f"2. With free material on internet.")
-        print(B_LIGHTMAGENTA_EX + f"3. During your free time as hobby.")
+    # Survey sub-question 3
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 3: Where did you acquire")
+    print(B_LIGHTMAGENTA_EX + f"this knowledge?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. At school or any course paid.")
+    print(B_LIGHTMAGENTA_EX + f"2. With free material on internet.")
+    print(B_LIGHTMAGENTA_EX + f"3. During your free time as hobby.")
 
-        while True:
-            sub_answer = input("Enter your choice (1, 2 or 3): ")
+    while True:
+        sub_answer = input("Enter your choice (1, 2 or 3): ")
 
-            if sub_answer in ['1', '2', '3']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2 or 3.")
+        if sub_answer in ['1', '2', '3']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Fourth survey question
     print(B_CYAN + f"\nQuestion 4: Are you mentally active?\n")
@@ -237,21 +237,21 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1 or 2.")
 
-        # Survey sub-question 4
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 4: Do you play sports")
-        print(B_LIGHTMAGENTA_EX + f"during your free time?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. Yes.")
-        print(B_LIGHTMAGENTA_EX + f"2. Not really.")
+    # Survey sub-question 4
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 4: Do you play sports")
+    print(B_LIGHTMAGENTA_EX + f"during your free time?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. Yes.")
+    print(B_LIGHTMAGENTA_EX + f"2. Not really.")
 
-        while True:
-            sub_answer = input("Enter your choice (1 or 2): ")
+    while True:
+        sub_answer = input("Enter your choice (1 or 2): ")
 
-            if sub_answer in ['1', '2']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2 or 3.")
+        if sub_answer in ['1', '2']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Fifth survey question
     print(B_CYAN + f"\nQuestion 5: Do you prefer to work at home")
@@ -270,22 +270,22 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-        # Survey sub-question 5
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 5: Do you prefer")
-        print(B_LIGHTMAGENTA_EX + f"to work alone or in a team?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. I prefer to work alone at home.")
-        print(B_LIGHTMAGENTA_EX + f"2. Absolutely in a team.")
-        print(B_LIGHTMAGENTA_EX + f"3. I like to alternate.")
+    # Survey sub-question 5
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 5: Do you prefer")
+    print(B_LIGHTMAGENTA_EX + f"to work alone or in a team?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. I prefer to work alone at home.")
+    print(B_LIGHTMAGENTA_EX + f"2. Absolutely in a team.")
+    print(B_LIGHTMAGENTA_EX + f"3. I like to alternate.")
 
-        while True:
-            sub_answer = input("Enter your choice (1, 2 or 3): ")
+    while True:
+        sub_answer = input("Enter your choice (1, 2 or 3): ")
 
-            if sub_answer in ['1', '2', '3']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2 or 3.")
+        if sub_answer in ['1', '2', '3']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2 or 3.")
 
     # Sixth survey question
     print(B_CYAN + f"\nQuestion 6: How do you prefer to learn coding?\n")
@@ -304,24 +304,24 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
-        # Survey sub-question 6
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 6: What programming")
-        print(B_LIGHTMAGENTA_EX + f"languages you want to learn first?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. HTML and CSS.")
-        print(B_LIGHTMAGENTA_EX + f"2. JAVASCRIPT.")
-        print(B_LIGHTMAGENTA_EX + f"3. PYTHON.")
-        print(B_LIGHTMAGENTA_EX + f"4. C++.")
-        print(B_LIGHTMAGENTA_EX + f"5. Other.")
+    # Survey sub-question 6
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 6: What programming")
+    print(B_LIGHTMAGENTA_EX + f"languages you want to learn first?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. HTML and CSS.")
+    print(B_LIGHTMAGENTA_EX + f"2. JAVASCRIPT.")
+    print(B_LIGHTMAGENTA_EX + f"3. PYTHON.")
+    print(B_LIGHTMAGENTA_EX + f"4. C++.")
+    print(B_LIGHTMAGENTA_EX + f"5. Other.")
 
-        while True:
-            sub_answer = input("Enter your choice (1, 2, 3, 4 or 5): ")
+    while True:
+        sub_answer = input("Enter your choice (1, 2, 3, 4 or 5): ")
 
-            if sub_answer in ['1', '2', '3', '4', '5']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")
+        if sub_answer in ['1', '2', '3', '4', '5']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, 3, 4 or 5.")
 
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
