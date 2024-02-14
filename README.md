@@ -55,3 +55,84 @@ The site is aimed at people who want to take survey and want to help getting sta
   - Check if there are any update of the survey or more questions added.
 
 ---
+
+## Features
+
+- Collect user coding information.
+- Store the result data in Google spreadsheet.
+- Collect user answers for the survey.
+- View user statistics
+
+### Existing Features
+
+- Title section
+  - Include a initial loading system
+  - An explanation about the purpose of this survey.
+
+![Title](images/welcome_1.png)
+![Title](images/welcome_2.png)
+
+- Enter name section
+  - Include a enter name section.
+  - If the input of the name is wrong, the error will show explaining the correct characters to enter.
+
+![Name](images/enter_name.png)
+![Name](images/enter_name_errors.png)
+
+- Survey menù section
+  - Include the menù of the survey
+  - The user can choice 3 options.The first option the survey will start.
+
+![Menù](images/survey_started.png)
+
+- First Question
+  - Include the first question
+  - The user can choice 4 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question1](images/question_1.png)
+
+- First Sub-Question
+  - Include the first Sub-question
+  - The user can choice 4 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question1](images/sub_question_1.png)
+
+- Second Question
+  - Include the second question
+  - The user can choice 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question2](images/question_2.png)
+
+- Second Sub-Question
+  - Include the second Sub-question
+  - The user can choice 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question2](images/sub_question_2.png)
+
+- Third Question
+  - Include the third question
+  - The user can choice 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question3](images/question_3.png)
+
+- Third Sub-Question
+  - Include the third Sub-question
+  - The user can choice 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question3](images/sub_question_3.png)
+
+---
+
+## Features Left to Implement
+
+* Insert more questions and sub-questions.
+* Insert choice to see individual user answer questions before survey completed.
+* Insert choice to submit or not the survey at the end of the questions.
+
+---
