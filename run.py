@@ -138,23 +138,23 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
-        # Survey sub-question 1
-        print(B_LIGHTMAGENTA_EX + f"\nSub-Question 1: What type of career")
-        print(B_LIGHTMAGENTA_EX + f"would you be interested in?\n")
-        print(B_LIGHTMAGENTA_EX + f"1. Full Stack Web Development.")
-        print(B_LIGHTMAGENTA_EX + f"2. Software Developer.")
-        print(B_LIGHTMAGENTA_EX + f"3. Data Engineer.")
-        print(B_LIGHTMAGENTA_EX + f"4. Game Development.")
+    # Survey sub-question 1
+    print(B_LIGHTMAGENTA_EX + f"\nSub-Question 1: What type of career")
+    print(B_LIGHTMAGENTA_EX + f"would you be interested in?\n")
+    print(B_LIGHTMAGENTA_EX + f"1. Full Stack Web Development.")
+    print(B_LIGHTMAGENTA_EX + f"2. Software Developer.")
+    print(B_LIGHTMAGENTA_EX + f"3. Data Engineer.")
+    print(B_LIGHTMAGENTA_EX + f"4. Game Development.")
 
-        while True:
-            sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
+    while True:
+        sub_answer = input("Enter your choice (1, 2, 3, or 4): ")
 
-            if sub_answer in ['1', '2', '3', '4']:
-                user.append(sub_answer)
-                print("Data saved. Thank you!")
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, 3, or 4.")
+        if sub_answer in ['1', '2', '3', '4']:
+            user.append(sub_answer)
+            print("Data saved. Thank you!")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, 3, or 4.")
 
     # Second survey question
     print(B_CYAN + f"\nQuestion 2: How many hours you would")
