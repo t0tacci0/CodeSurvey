@@ -217,3 +217,23 @@ The site is aimed at people who want to take survey and want to help getting sta
   - API for Google sheets use to store survey data.
 
 ---
+
+### Credits
+
+### Code
+
+- Understanding various concepts of Python [w3schools](https://www.w3schools.com/python/default.asp)
+- The Project 3 template was helpfully provided by [Code Institute (template)](https://github.com/Code-Institute-Org/p3-template)
+
+### Content
+
+- All content was created and written by Antonio Cesarino, the developer.
+
+---
+
+### Acknowledgements
+
+- My mentor Mitko Bachvarov provided amazing feedback and guidance.He assisted me with important suggestions during all steps for my project.
+- Code Institute and Slack community for encouragement and information.
+
+---
