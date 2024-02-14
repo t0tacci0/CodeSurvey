@@ -138,7 +138,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
-    if answer == '1' or answer == '3':
         # Survey sub-question 1
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 1: What type of career")
         print(B_LIGHTMAGENTA_EX + f"would you be interested in?\n")
@@ -174,7 +173,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-    if answer == '1' or answer == '2':
         # Survey sub-question 2
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 2: Are you working now?\n")
         print(B_LIGHTMAGENTA_EX + f"1. Yes, full-time.")
@@ -207,7 +205,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-    if answer == '1' or answer == '2':
         # Survey sub-question 3
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 3: Where did you acquire")
         print(B_LIGHTMAGENTA_EX + f"this knowledge?\n")
@@ -240,7 +237,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1 or 2.")
 
-    if answer == '1':
         # Survey sub-question 4
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 4: Do you play sports")
         print(B_LIGHTMAGENTA_EX + f"during your free time?\n")
@@ -274,7 +270,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
 
-    if answer == '1' or answer == '3':
         # Survey sub-question 5
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 5: Do you prefer")
         print(B_LIGHTMAGENTA_EX + f"to work alone or in a team?\n")
@@ -309,7 +304,6 @@ def take_survey():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
-    if answer == '1' or answer == '3':
         # Survey sub-question 6
         print(B_LIGHTMAGENTA_EX + f"\nSub-Question 6: What programming")
         print(B_LIGHTMAGENTA_EX + f"languages you want to learn first?\n")
