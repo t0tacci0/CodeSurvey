@@ -18,8 +18,6 @@ Coding Survey is a project configure using python, there are a series of questio
 
 ### [Features Left to Implement](#features-left-to-implement-1)
 
-### [Design](#design-1)
-
 ### [Technologies Used](#technologies-used-1)
 
 ### [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used-1)
@@ -196,5 +194,26 @@ The site is aimed at people who want to take survey and want to help getting sta
 * Insert more questions and sub-questions.
 * Insert choice to see individual user answer questions before survey completed.
 * Insert choice to submit or not the survey at the end of the questions.
+
+---
+
+## Technologies Used
+
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+---
+
+## Frameworks, Libraries & Programs Used
+
+- [Heroku](https://dashboard.heroku.com/apps)
+  - Platform as a service (PaaS) that was used to host and deploy the finished project.
+- [Codeanywhere](https://codeanywhere.com/platform)
+  - Program used for coding
+- [Github](https://github.com/)
+  - Deployment of the website and storing the files online.
+- [Colorama](https://pypi.org/project/colorama/)
+  - Library used to style the text with color to improve UX and readability.
+- [Gspread](https://docs.gspread.org/en/v6.0.0/)
+  - API for Google sheets use to store survey data.
 
 ---
