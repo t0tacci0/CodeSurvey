@@ -61,12 +61,12 @@ The site is aimed at people who want to take survey and want to help getting sta
 - Collect user coding information.
 - Store the result data in Google spreadsheet.
 - Collect user answers for the survey.
-- View user statistics
+- View user statistics.
 
 ### Existing Features
 
 - Title section
-  - Include a initial loading system
+  - Include a initial loading system.
   - An explanation about the purpose of this survey.
 
 ![Title](images/welcome_1.png)
@@ -80,52 +80,114 @@ The site is aimed at people who want to take survey and want to help getting sta
 ![Name](images/enter_name_errors.png)
 
 - Survey menù section
-  - Include the menù of the survey
-  - The user can choice 3 options.The first option the survey will start.
+  - Include the menù of the survey.
+  - The user can choose 3 options.The first option the survey will start.
 
 ![Menù](images/survey_started.png)
 
 - First Question
-  - Include the first question
-  - The user can choice 4 options.
+  - Include the first question.
+  - The user can choose 4 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Question1](images/question_1.png)
 
 - First Sub-Question
-  - Include the first Sub-question
-  - The user can choice 4 options.
+  - Include the first Sub-question.
+  - The user can choose 4 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Sub-Question1](images/sub_question_1.png)
 
 - Second Question
-  - Include the second question
-  - The user can choice 3 options.
+  - Include the second question.
+  - The user can choose 3 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Question2](images/question_2.png)
 
 - Second Sub-Question
-  - Include the second Sub-question
-  - The user can choice 3 options.
+  - Include the second Sub-question.
+  - The user can choose 3 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Sub-Question2](images/sub_question_2.png)
 
 - Third Question
-  - Include the third question
-  - The user can choice 3 options.
+  - Include the third question.
+  - The user can choose 3 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Question3](images/question_3.png)
 
 - Third Sub-Question
-  - Include the third Sub-question
-  - The user can choice 3 options.
+  - Include the third Sub-question.
+  - The user can choose 3 options.
   - If the user insert the wrong number option,a relative error will show.
 
 ![Sub-Question3](images/sub_question_3.png)
+
+- Fourth Question
+  - Include the fourth question.
+  - The user can choose 2 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question4](images/question_4.png)
+
+- Fourth Sub-Question
+  - Include the fourth Sub-question.
+  - The user can choose 2 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question4](images/sub_question_4.png)
+
+- Fifth Question
+  - Include the fifth question.
+  - The user can choose 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question5](images/question_5.png)
+
+- Fifth Sub-Question
+  - Include the fifth Sub-question.
+  - The user can choose 3 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question5](images/sub_question_5.png)
+
+- Sixth Question
+  - Include the sixth question.
+  - The user can choose 4 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Question6](images/question_6.png)
+
+- Sixth Sub-Question
+  - Include the sixth Sub-question.
+  - The user can choose 5 options.
+  - If the user insert the wrong number option,a relative error will show.
+
+![Sub-Question6](images/sub_question_6.png)
+
+- End Survey
+  - The survey will end.
+  - The survey menú will appear again to let users to choose.
+
+![End Survey](images/end_survey.png)
+
+- Statistic section
+  - Include the user choice statistics in relative percentual.
+  - First image will show a empty user statistics.
+
+![Empty Statistic](images/empty_statistics.png)
+![Statistic 1](images/statistics_1.png)
+![Statistic 2](images/statistics_2.png)
+![Statistic 3](images/statistics_3.png)
+
+- Exit choice
+  - The user can choose to exit definitively the survey.
+
+![Exit choice](images/exit_choice.png)
 
 ---
 
