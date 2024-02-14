@@ -218,6 +218,36 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 ---
 
+### Deployment and local development
+
+The program was developed in Codeanywhere. It was then committed and pushed to GitHub. The finished project was deployed in Heroku using the Code Institute Python Terminal for display purposes. Deployment to Heroku was completed using the following steps:
+
+- Run 'pip3 freeze > requirements.txt' in the terminal to add a list of dependencies to requirements.txt .
+- Commit these changes and push to GitHub.
+- Open and login to Heroku.
+- From the dashboard, click 'New', then click 'Create new app'.
+- Enter the App name, choose a region, then click 'Create app'.
+- Navigate to the 'Settings' tab.
+- Within 'Settings', navigate to 'Config Vars'.
+- Two config vars need to be added using the following 'KEY' and 'VALUE' pairs:
+  KEY = 'CREDS', VALUE = Copy and paste the entire contents of the creds.json file into this field. Then click 'Add'.
+  KEY = 'PORT', VALUE = '8000'. Then click 'Add'.
+- Within 'Settings', navigate to 'Buildpack'.
+- Click 'Add buildpack'. Select 'Python', then click 'Save changes'.
+- Click 'Add buildpack' again. Select 'nodejs', then click 'Save changes'.
+  Ensure that these buildpacks are in the correct order: Python on top and nodejs underneath.
+  If they are in the wrong order, click and drag to fix this.
+- Navigate to the 'Deploy' tab.
+- Within 'Deploy', navigate to 'Deployment method'.
+- Click on 'GitHub'. Navigate to 'Connect to GitHub' and click 'Connect to GitHub'.
+- Within 'Connect to GitHub', use the search function to find the repository to be deployed. Click 'Connect'.
+- Navigate to either 'Automatic Deploys' or 'Manual Deploys' to choose which method to deploy the application.
+- Click on 'Enable Automatic Deploys' or 'Deploy Branch' respectively, depending on chosen method.
+- Once the app is finished building, a message saying 'Your app was successfully deployed' will appear.
+- Click 'View' to see the deployed app.
+
+---
+
 ### Credits
 
 ### Code
