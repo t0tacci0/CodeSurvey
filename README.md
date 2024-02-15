@@ -12,9 +12,6 @@ Coding Survey is a project configure using python, there are a series of questio
 
 - [User Stories](#user-stories)
 - [Data Model](#data-model)
-
-[Spreadsheet link](https://docs.google.com/spreadsheets/d/1wSeJi2abSmbRQZRm-1mazV_biynxeX6EFjFmgoU4Q30/edit#gid=527622439)
-
 - [Flowchart](#flowchart)
 
 ### [Features](#features-1)
@@ -30,7 +27,7 @@ Coding Survey is a project configure using python, there are a series of questio
 ### [Testing](#testing-1)
 
 - [Testing User Stories](#testing-user-stories)
-- [Features testing](#features-testing)
+- [Features Testing](#features-testing)
 
 ### [Code validation](#code-validation-1)
 
@@ -71,6 +68,8 @@ The site is aimed at people who want to take survey and want to help getting sta
 The program uses a Google sheet to store the answers collected from the survey and to have a final choices statistic.
 
 ![survey_answers](images/spreadsheet.png)
+
+[Spreadsheet link](https://docs.google.com/spreadsheets/d/1wSeJi2abSmbRQZRm-1mazV_biynxeX6EFjFmgoU4Q30/edit#gid=527622439)
 
 ### Flowchart
 
@@ -260,22 +259,18 @@ The program uses a Google sheet to store the answers collected from the survey a
     - There are few option in each question.
     - Invalid input will print out if the number key in is out of range.
 
-## Feature Testing
+### Feature Testing
 
 - I have manually tested the following features in Gitpod and in the Code Institute Heroku terminal:
 
 TEST       | DESIRED RESULT          | PASS/FAIL |
 ---------- | ----------------------- | --------- |
-Title screen | When the program runs, the system loading text  is displayed and stay for 5 seconds. | PASS
-Welcome messages | When Title screen closes, the welcome messages are displayed and stay for 5-6 and 5 seconds respectively. | PASS
-Enter name | After welcome messages user has to enter name with correct characters.With wrong characters, an error shows up. | PASS
-Main Menu | After name  the Main Menu is displayed with 3 options, 1- take survey, 2 - view statistic and 3- exit.Typing the chosen option takes you to the right screen. | PASS
-Take survey | When typing option 1 in Main menu the survey starts and show the first question with options.A relative error shows if wrong number option is entered.Typing the correct option takes you to the next sub-question. | PASS
-First sub-question | There are options, the correct selected option takes you to the next question.A relative error shows if wrong number option is entered. | PASS
-Questions 2 to 6 | Each question shows correct options and all of them shows an error message with wrong number entered.Typing the correct number option takes you to the next sub-question. | PASS
-Sub-question 2 to 6 | This question shows options, all of them shows a message with the selected option after typing it and takes you to the next question. | PASS
-Survey statistic result | This screen shows a list with all the user's answers when the option 2 is selected. | PASS
-Exit menu | When the user choose to exit ,a screen with good at text is displayed. | PASS    
+Welcome messages | When the welcome messages are displayed i typed repeatedly random characters and this don't let the time for messages to appear. | PASS
+Enter name | I typed an incorrect name with mix of space and special characters.A error is displayed continuously with no bugs. | PASS
+Main Menu | In the Main menù there are 3 options, 1- take survey, 2 - view statistic and 3- exit.Typing a number or characters different a error is displayed. | PASS
+Questions | Typing the correct number option takes user to the next question or sub-question.Typing the wrong number it doesn't let to continue. | PASS
+Survey statistic result | This screen shows a list with all the user's answers when the option 2 is selected.No bugs found in spreadsheet. | PASS
+Exit texts | When the user choose to exit ,a screen with text is displayed. | PASS    
 
 
 ### Code validation
