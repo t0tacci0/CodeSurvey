@@ -11,6 +11,8 @@ Coding Survey is a project configure using python, there are a series of questio
 ### [User Experience (UX)](#user-experience-ux-1)
 
 - [User Stories](#user-stories)
+- [Data Model](#data-model)
+- [Flowchart](#flowchart)
 
 ### [Features](#features)
 
@@ -51,6 +53,19 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 - Frequent user goals
   - Check if there are any update of the survey or more questions added.
+
+
+### Data Model
+
+The program uses a Google sheet to store the answers collected from the survey and to have a final choices statistic.
+
+![survey_answers](images/spreadsheet.png)
+
+### Flowchart
+
+[Diagrams](https://app.diagrams.net/) was used to create the original flowchart for the project.
+
+![Flowchart](images/flowchart.png)
 
 ---
 
@@ -253,7 +268,7 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 ---
 
-### [Bugs]
+### Bugs
 
 - There was a problem with the data append into the worksheet and with statistics option.The if statement for question answers relative to sub-question left blank space in worksheet when the answer wasn't choosen from main question.This was the cause of a mix of results btw questions and sub-questions and the statistic was wrong.
 

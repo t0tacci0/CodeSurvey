@@ -17,16 +17,16 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('code_survey')
 
-"""
+
 # Colorama colours for the terminal
-"""
 B_GREEN = Fore.GREEN + Style.BRIGHT  # green color text
 B_YELLOW = Fore.YELLOW + Style.BRIGHT  # yellow color text
 B_CYAN = Fore.CYAN + Style.BRIGHT  # cyan color text
-B_RED = Fore.RED + Style.BRIGHT  # red color text
+B_RED = Fore.RED + Style.BRIGHT  # red color text for errors
 B_LIGHTMAGENTA_EX = Fore.LIGHTMAGENTA_EX + Style.BRIGHT  # magenta color text
 
 
+# This function is a introduction to the survey
 def welcome():
     print(B_GREEN + f"System loading.....")
     time.sleep(5)
@@ -61,6 +61,7 @@ def clear():
         os.system('clear')
 
 
+# Menù options
 def homepage():
     while True:
         print(B_GREEN + f"1. Take Survey")
@@ -113,6 +114,7 @@ def view_statistics():
         print()
 
 
+# Survey main function
 def take_survey():
     print()
     print("Survey started!")
