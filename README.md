@@ -218,7 +218,7 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 ---
 
-### [Testing]
+### Testing
 
 ### Testing User Stories
 
@@ -234,7 +234,8 @@ The site is aimed at people who want to take survey and want to help getting sta
     - There are few option in each question.
     - Invalid input will print out if the number key in is out of range.
 
-### [Code validation]
+
+### Code validation
 
 - [CI Python Linter](https://pep8ci.herokuapp.com/) :
     - This PEP8 tool provided by Code Institute was used for validated the code for the project.
@@ -249,6 +250,15 @@ The site is aimed at people who want to take survey and want to help getting sta
 - After resolved all the errors, the code was validated again.
 
 ![Validated - 2](images/ci_python_linters.png)
+
+---
+
+### [Bugs]
+
+- There was a problem with the data append into the worksheet and with statistics option.The if statement for question answers relative to sub-question left blank space in worksheet when the answer wasn't choosen from main question.This was the cause of a mix of results btw questions and sub-questions and the statistic was wrong.
+
+- Resolved
+    - I changed the if statement before each sub-question and now the worksheet show the right choices for each row.
 
 ---
 

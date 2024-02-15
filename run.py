@@ -18,7 +18,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('code_survey')
 
 """
-This is for color style text
+# Colorama colours for the terminal
 """
 B_GREEN = Fore.GREEN + Style.BRIGHT  # green color text
 B_YELLOW = Fore.YELLOW + Style.BRIGHT  # yellow color text
