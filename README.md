@@ -12,6 +12,9 @@ Coding Survey is a project configure using python, there are a series of questio
 
 - [User Stories](#user-stories)
 - [Data Model](#data-model)
+
+[Spreadsheet link](https://docs.google.com/spreadsheets/d/1wSeJi2abSmbRQZRm-1mazV_biynxeX6EFjFmgoU4Q30/edit#gid=527622439)
+
 - [Flowchart](#flowchart)
 
 ### [Features](#features-1)
@@ -26,10 +29,10 @@ Coding Survey is a project configure using python, there are a series of questio
 
 ### [Testing](#testing-1)
 
-- [Testing User Stories](#testing-user-stories-1)
-- [Features testing](#features-testing-1)
+- [Testing User Stories](#testing-user-stories)
+- [Features testing](#features-testing)
 
-### [Code validation](#code-validation)
+### [Code validation](#code-validation-1)
 
 ### [Bugs](#bugs-1)
 
@@ -38,8 +41,7 @@ Coding Survey is a project configure using python, there are a series of questio
 [GitHub Pages](#github-pages)
 - [Forking the GitHub Repository](#forking-the-github-repository)
 - [Local Clone](#local-clone)
-
-## [Heroku Deployment](#heroku-deployment-1)
+[Heroku Deployment](#heroku-deployment)
 
 ### [Credits](#credits-1)
 
