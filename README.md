@@ -26,6 +26,9 @@ Coding Survey is a project configure using python, there are a series of questio
 
 ### [Testing](#testing-1)
 
+- [Testing User Stories](#testing-user-stories)
+- [Features testing](#features-testing)
+
 ### [Code validation](#code-validation)
 
 ### [Bugs](#bugs-1)
@@ -248,6 +251,23 @@ The program uses a Google sheet to store the answers collected from the survey a
 - As a user, I would like to be able to choose an answer from the options.
     - There are few option in each question.
     - Invalid input will print out if the number key in is out of range.
+
+## Feature Testing
+
+- I have manually tested the following features in Gitpod and in the Code Institute Heroku terminal:
+
+TEST       | DESIRED RESULT          | PASS/FAIL |
+---------- | ----------------------- | --------- |
+Title screen | When the program runs, the system loading text  is displayed and stay for 5 seconds. | PASS
+Welcome messages | When Title screen closes, the welcome messages are displayed and stay for 5-6 and 5 seconds respectively. | PASS
+Enter name | After welcome messages user has to enter name with correct characters.With wrong characters, an error shows up. | PASS
+Main Menu | After name  the Main Menu is displayed with 3 options, 1- take survey, 2 - view statistic and 3- exit.Typing the chosen option takes you to the right screen. | PASS
+Take survey | When typing option 1 in Main menu the survey starts and show the first question with options.A relative error shows if wrong number option is entered.Typing the correct option takes you to the next sub-question. | PASS
+First sub-question | There are options, the correct selected option takes you to the next question.A relative error shows if wrong number option is entered. | PASS
+Questions 2 to 6 | Each question shows correct options and all of them shows an error message with wrong number entered.Typing the correct number option takes you to the next sub-question. | PASS
+Sub-question 2 to 6 | This question shows options, all of them shows a message with the selected option after typing it and takes you to the next question. | PASS
+Survey statistic result | This screen shows a list with all the user's answers when the option 2 is selected. | PASS
+Exit menu | When the user choose to exit ,a screen with good at text is displayed. | PASS    
 
 
 ### Code validation
