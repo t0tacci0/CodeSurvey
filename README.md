@@ -24,9 +24,9 @@ Coding Survey is a project configure using python, there are a series of questio
 
 ### [Testing](#testing-1)
 
-- [Code validation](#code-validation)
+### [Code validation](#code-validation)
 
-### [Unfixed Bugs](#unfixed-bugs-1)
+### [Bugs](#bugs-1)
 
 ### [Deployment and local development](#deployment-and-local-development-1)
 
@@ -54,7 +54,7 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 ---
 
-## Features
+### Features
 
 - Collect user coding information.
 - Store the result data in Google spreadsheet.
@@ -215,6 +215,40 @@ The site is aimed at people who want to take survey and want to help getting sta
   - Library used to style the text with color to improve UX and readability.
 - [Gspread](https://docs.gspread.org/en/v6.0.0/)
   - API for Google sheets use to store survey data.
+
+---
+
+### [Testing]
+
+### Testing User Stories
+
+- As a user, I would like to understand the program purpose.
+    - The home page show the message "Code Survey Program" show that this survey is about Coding.
+    - The welcome message and introductory have explained that the survey was created to get information from users about coding.
+    - The program always shows readable instructions and maintains a smooth path through menus and questions.
+
+- As a user, I would like to be able to choose whether to take the survey , show statistic or exit the program.
+    - The menu have three options and the user can choose.
+
+- As a user, I would like to be able to choose an answer from the options.
+    - There are few option in each question.
+    - Invalid input will print out if the number key in is out of range.
+
+### [Code validation]
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/) :
+    - This PEP8 tool provided by Code Institute was used for validated the code for the project.
+
+- There are some error after validating first time:
+    - Trailing whitespace.
+    - Line too long.
+    - Blank line containing whitespace.
+
+![Validated - 1](images/ci_python_Linter_errors.png)
+
+- After resolved all the errors, the code was validated again.
+
+![Validated - 2](images/ci_python_linters.png)
 
 ---
 
