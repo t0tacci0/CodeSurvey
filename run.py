@@ -46,6 +46,9 @@ def welcome():
         user_name = input(B_YELLOW + f"Please enter your name: ")
         print()
         if re.match("^[a-zA-Z]+$", user_name):
+            # Append user name to the "user_name" worksheet
+            user_name_worksheet = SHEET.worksheet("user_name")
+            user_name_worksheet.append_row([user_name])
             break
         else:
             print(B_RED + f"Invalid name.")
