@@ -78,7 +78,6 @@ def homepage():
                 view_statistics()
             else:
                 print(B_RED + f"Invalid passphrase. Access denied.")
-            view_statistics()
         elif choice == '3':
             print()
             print(f"{Fore.YELLOW}{Style.BRIGHT}Exiting the Code Survey...")
@@ -334,7 +333,6 @@ def take_survey():
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
     print(B_GREEN + f"\nThank you for partecipating!!")
-    print()
     print(B_GREEN + f"\nTo View statistics digit the passphrase 'surveydone'")
     print()
 
