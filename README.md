@@ -38,7 +38,7 @@ Coding Survey is a project configure using python, there are a series of questio
 [GitHub Pages](#github-pages)
 - [Forking the GitHub Repository](#forking-the-github-repository)
 - [Local Clone](#local-clone)
-[Heroku Deployment](#heroku-deployment)
+- [Heroku Deployment](#heroku-deployment)
 
 ### [Credits](#credits-1)
 
@@ -67,7 +67,8 @@ The site is aimed at people who want to take survey and want to help getting sta
 
 The program uses a Google sheet to store the answers collected from the survey and to have a final choices statistic.
 
-![survey_answers](images/spreadsheet.png)
+![survey_answers](images/spreadsheet_1.png)
+![user_name](images/spreadsheet_2.png)
 
 [Spreadsheet link](https://docs.google.com/spreadsheets/d/1wSeJi2abSmbRQZRm-1mazV_biynxeX6EFjFmgoU4Q30/edit#gid=527622439)
 
@@ -81,7 +82,7 @@ The program uses a Google sheet to store the answers collected from the survey a
 
 ### Features
 
-- Collect user coding information.
+- Collect users coding information.
 - Store the result data in Google spreadsheet.
 - Collect user answers for the survey.
 - View user statistics.
@@ -195,14 +196,13 @@ The program uses a Google sheet to store the answers collected from the survey a
 - End Survey
   - The survey will end.
   - The survey menú will appear again to let users to choose.
+  - The passphrase to view statistics will be available once the survey is done.
 
 ![End Survey](images/end_survey.png)
 
 - Statistic section
   - Include the user choice statistics in relative percentual.
-  - First image will show a empty user statistics.
 
-![Empty Statistic](images/empty_statistics.png)
 ![Statistic 1](images/statistics_1.png)
 ![Statistic 2](images/statistics_2.png)
 ![Statistic 3](images/statistics_3.png)
@@ -217,7 +217,6 @@ The program uses a Google sheet to store the answers collected from the survey a
 ## Features Left to Implement
 
 * Insert more questions and sub-questions.
-* Insert choice to see individual user answer questions before survey completed.
 * Insert choice to submit or not the survey at the end of the questions.
 
 ---
@@ -259,7 +258,7 @@ The program uses a Google sheet to store the answers collected from the survey a
     - There are few option in each question.
     - Invalid input will print out if the number key in is out of range.
 
-### Feature Testing
+### Features Testing
 
 - I have manually tested the following features in Gitpod and in the Code Institute Heroku terminal:
 
@@ -283,7 +282,7 @@ Exit texts | When the user choose to exit ,a screen with text is displayed. | PA
     - Line too long.
     - Blank line containing whitespace.
 
-![Validated - 1](images/ci_python_Linter_errors.png)
+![Validated - 1](images/ci_python_linter_errors.png)
 
 - After resolved all the errors, the code was validated again.
 
@@ -298,6 +297,10 @@ Exit texts | When the user choose to exit ,a screen with text is displayed. | PA
 - Resolved
     - I changed the if statement before each sub-question and now the worksheet show the right choices for each row.
 
+- There was a problem about storing user name data.They were displayed on first row and first column of the choices worksheet causing errors for appended answers.I tried to change the position of user names but the problem wasnt fixed.
+
+- Resolved
+    - I created a new worksheet called user_name only for user names.
 ---
 
 ### Deployment and local development
