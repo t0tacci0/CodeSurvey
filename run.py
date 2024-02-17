@@ -72,6 +72,12 @@ def homepage():
         if choice == '1':
             take_survey()
         elif choice == '2':
+            # Prompt for passphrase
+            passphrase = input(f"{Fore.YELLOW}Enter the passphrase: ")
+            if passphrase == "surveydone":
+                view_statistics()
+            else:
+                print(B_RED + f"Invalid passphrase. Access denied.")
             view_statistics()
         elif choice == '3':
             print()
@@ -328,6 +334,9 @@ def take_survey():
     worksheet = SHEET.worksheet("user_choices")
     worksheet.append_row(user)
     print(B_GREEN + f"\nThank you for partecipating!!")
+    print()
+    print(B_GREEN + f"\nTo View statistics digit the passphrase 'surveydone'")
+    print()
 
 
 welcome()
